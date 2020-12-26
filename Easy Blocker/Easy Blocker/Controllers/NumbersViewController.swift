@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CallKit
 
 class NumbersViewController: UIViewController {
     
@@ -13,7 +14,6 @@ class NumbersViewController: UIViewController {
     
     private var fileUrl: URL? {
         let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.studio.devlav.easy-blocker")?.appendingPathComponent("numbers")
-        print(url!.absoluteString)
         return url
     }
     
@@ -27,6 +27,11 @@ class NumbersViewController: UIViewController {
     private func reloadData() {
         self.numbers = loadList()
         self.tableView.reloadData()
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: "studio.devlav.easy-blocker.easy-blocker-ext") { error in
+            if let error = error {
+                print(error)
+            }
+        }
     }
     
     @IBAction func onAdd(_ sender: UIBarButtonItem) {
@@ -109,13 +114,12 @@ extension NumbersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "DEL") { [weak self]_ , _, handler in
             handler(true)
-//            self?.delete(for: task)
+            self?.numbers.remove(at: indexPath.row)
+            self?.saveList()
+            self?.reloadData()
         }
-        
-        
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         configuration.performsFirstActionWithFullSwipe = false
-        
         return configuration
     }
 }
