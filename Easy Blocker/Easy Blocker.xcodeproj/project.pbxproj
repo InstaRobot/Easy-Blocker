@@ -23,7 +23,7 @@
 		501796AC2597575300AE8335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		501796AE2597575500AE8335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		501796B12597575500AE8335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		501796B32597575500AE8335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501796B32597575500AE8335 /* Info-App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-App.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,47 @@
 		501796A42597575300AE8335 /* Easy Blocker */ = {
 			isa = PBXGroup;
 			children = (
-				501796A52597575300AE8335 /* AppDelegate.swift */,
-				501796A72597575300AE8335 /* SceneDelegate.swift */,
-				501796A92597575300AE8335 /* ViewController.swift */,
-				501796AB2597575300AE8335 /* Main.storyboard */,
-				501796AE2597575500AE8335 /* Assets.xcassets */,
-				501796B02597575500AE8335 /* LaunchScreen.storyboard */,
-				501796B32597575500AE8335 /* Info.plist */,
+				501796BB2597582800AE8335 /* Application */,
+				501796BD2597583400AE8335 /* Controllers */,
+				501796BF2597584900AE8335 /* Boards */,
+				501796C02597586500AE8335 /* Supporting files */,
 			);
 			path = "Easy Blocker";
+			sourceTree = "<group>";
+		};
+		501796BB2597582800AE8335 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				501796A52597575300AE8335 /* AppDelegate.swift */,
+				501796A72597575300AE8335 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		501796BD2597583400AE8335 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				501796A92597575300AE8335 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		501796BF2597584900AE8335 /* Boards */ = {
+			isa = PBXGroup;
+			children = (
+				501796AB2597575300AE8335 /* Main.storyboard */,
+				501796B02597575500AE8335 /* LaunchScreen.storyboard */,
+			);
+			path = Boards;
+			sourceTree = "<group>";
+		};
+		501796C02597586500AE8335 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				501796AE2597575500AE8335 /* Assets.xcassets */,
+				501796B32597575500AE8335 /* Info-App.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +320,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
-				INFOPLIST_FILE = "Easy Blocker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Easy Blocker/Supporting files/Info-App.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "studio.devlav.Easy-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +340,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
-				INFOPLIST_FILE = "Easy Blocker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Easy Blocker/Supporting files/Info-App.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "studio.devlav.Easy-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
