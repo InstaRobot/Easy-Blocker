@@ -15,6 +15,8 @@
 		501796B22597575500AE8335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501796B02597575500AE8335 /* LaunchScreen.storyboard */; };
 		5035B8C2259760DF00F74120 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035B8C1259760DF00F74120 /* CallDirectoryHandler.swift */; };
 		5035B8C6259760DF00F74120 /* Easy Blocker Ext..appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5035B8BF259760DF00F74120 /* Easy Blocker Ext..appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5035B8D825976F1E00F74120 /* NumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035B8D725976F1E00F74120 /* NumberEntry.swift */; };
+		5035B8D925976F1E00F74120 /* NumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035B8D725976F1E00F74120 /* NumberEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		5035B8BF259760DF00F74120 /* Easy Blocker Ext..appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Easy Blocker Ext..appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5035B8C1259760DF00F74120 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
 		5035B8C3259760DF00F74120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5035B8D125976C6200F74120 /* Easy Blocker Ext..entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Easy Blocker Ext..entitlements"; sourceTree = "<group>"; };
+		5035B8D425976C7C00F74120 /* Easy Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Easy Blocker.entitlements"; sourceTree = "<group>"; };
+		5035B8D725976F1E00F74120 /* NumberEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,8 @@
 		501796A42597575300AE8335 /* Easy Blocker */ = {
 			isa = PBXGroup;
 			children = (
+				5035B8D425976C7C00F74120 /* Easy Blocker.entitlements */,
+				5035B8D725976F1E00F74120 /* NumberEntry.swift */,
 				501796BB2597582800AE8335 /* Application */,
 				501796BD2597583400AE8335 /* Controllers */,
 				501796BF2597584900AE8335 /* Boards */,
@@ -140,6 +147,7 @@
 		5035B8C0259760DF00F74120 /* Easy Blocker Ext. */ = {
 			isa = PBXGroup;
 			children = (
+				5035B8D125976C6200F74120 /* Easy Blocker Ext..entitlements */,
 				5035B8C1259760DF00F74120 /* CallDirectoryHandler.swift */,
 				5035B8C3259760DF00F74120 /* Info.plist */,
 			);
@@ -249,6 +257,7 @@
 				501796AA2597575300AE8335 /* NumbersViewController.swift in Sources */,
 				501796A62597575300AE8335 /* AppDelegate.swift in Sources */,
 				501796A82597575300AE8335 /* SceneDelegate.swift in Sources */,
+				5035B8D825976F1E00F74120 /* NumberEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5035B8C2259760DF00F74120 /* CallDirectoryHandler.swift in Sources */,
+				5035B8D925976F1E00F74120 /* NumberEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +422,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Easy Blocker/Easy Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
 				INFOPLIST_FILE = "$(SRCROOT)/Easy Blocker/Supporting files/Info-App.plist";
@@ -433,6 +444,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Easy Blocker/Easy Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
 				INFOPLIST_FILE = "$(SRCROOT)/Easy Blocker/Supporting files/Info-App.plist";
@@ -452,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Easy Blocker Ext./Easy Blocker Ext..entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
 				INFOPLIST_FILE = "Easy Blocker Ext./Info.plist";
@@ -473,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Easy Blocker Ext./Easy Blocker Ext..entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GA5QK7SQDU;
 				INFOPLIST_FILE = "Easy Blocker Ext./Info.plist";

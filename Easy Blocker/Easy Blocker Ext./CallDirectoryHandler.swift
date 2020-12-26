@@ -9,6 +9,32 @@ import Foundation
 import CallKit
 
 class CallDirectoryHandler: CXCallDirectoryProvider {
+    
+    private var fileUrl: URL? {
+        let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.studio.devlav.easy-blocker")?.appendingPathComponent("numbers")
+        return url
+    }
+    
+    private func loadList() -> [NumberEntry] {
+        guard
+            let path = fileUrl?.path else {
+            return []
+        }
+        
+        if
+            FileManager.default.fileExists(atPath: path),
+            let data = FileManager.default.contents(atPath: path)
+        {
+            do {
+                let numbers = try JSONDecoder().decode([NumberEntry].self, from: data)
+                return numbers
+            }
+            catch {
+                print(error)
+            }
+        }
+        return []
+    }
 
     override func beginRequest(with context: CXCallDirectoryExtensionContext) {
         context.delegate = self
